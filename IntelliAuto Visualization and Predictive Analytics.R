@@ -8,7 +8,7 @@ str(df)
 install.packages("dplyr")
 library(dplyr)
 
-#001 - Relation of Employee year among Sex in different Occupation
+#Figure 001 - Relation of Employee year among Sex in different Occupation
 p1 <- ggplot(df, aes (x = Sex , y = EmpYears , fill = Sex)) + facet_wrap(~Occup_n)
 p2 <- p1 + geom_boxplot()
 p3 <- p2 + labs(x = "Sex" , y = "Employment year" , 
@@ -27,7 +27,7 @@ p3 <- p2 + labs(x = "Occupation" , y = "Employment year" ,
                 title = "The difference of Employment year in different Occupations in IntelliAuto organization") 
 p3
 
-#010 - Relation of Employee year and Number of Promotion among Sex in different Occupation
+#Figure 010 - Relation of Employee year and Number of Promotion among Sex in different Occupation
 cor(df1$EmpYears , df1$NumPromo)#Male
 cor(df2$EmpYears , df2$NumPromo)#Female
 
@@ -39,7 +39,7 @@ p3 <- p2 + labs(x = "Number of Promotion" , y = "Employment year" ,
 p4 <- p3 + geom_smooth(method = "lm")
 p4
 
-#011 - Relation of Employee year and Age among Sex
+#Figure 011 - Relation of Employee year and Age among Sex
 cor(df1$EmpYears , df1$Age) #Male
 cor(df2$EmpYears , df2$Age) #Female
 
@@ -50,7 +50,7 @@ p3 <- p2 + labs(x = "Age" , y = "Employment year" ,
 p4 <- p3 + geom_smooth(method = "lm")
 p4
 
-#100 - Relation of Employee year and Education year among Sex
+#Figure 100 - Relation of Employee year and Education year among Sex
 cor(df1$EmpYears , df1$Educ_Yrs) #Male
 cor(df2$EmpYears , df2$Educ_Yrs) #Female
 
@@ -61,7 +61,7 @@ p3 <- p2 + labs(x = "Education year" , y = "Employment year" ,
 p4 <- p3 + geom_smooth(method = "lm")
 p4
 
-#101 - Relation of Employee year and Working year among Sex
+#Figure 101 - Relation of Employee year and Working year among Sex
 cor(df1$EmpYears , df1$WrkYears) #Male
 cor(df2$EmpYears , df2$WrkYears)#Female
 
